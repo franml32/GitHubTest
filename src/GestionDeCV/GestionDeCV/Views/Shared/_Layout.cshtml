@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <title>@ViewBag.Title - Gestion de CV's</title>
+    
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" @Html.ActionLink("GTI - Gestion de CV's", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li>@Html.ActionLink("Acerca de", "About", "Home", new { area = "" }, new { @class = "navbar-nav" })</li>
+                <!--<li><a class="dropdown-item" href="~/Home/About">Acerca de</a></li>-->
+                <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Candidatos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="~/CandidateGeneralnfoes/Index">Listado de Candidatos</a>
+                        <a class="dropdown-item" href="#">Registrarse</a>
+                    </div>
+                </li>
+            </ul>   
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Creado por Francisco Martinez</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

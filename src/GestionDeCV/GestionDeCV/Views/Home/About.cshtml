@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    @{
+        ViewBag.Title = "Acerca de";
+    }
+    <h2>@ViewBag.Title</h2>
+
+    <div class="jumbotron text-center">
+        <h1>Maestria de Gestión de la Información.</h1>
+        <h2 class="lead">Clase de Gestión de Proyectos de Software</h2>
+        <p>
+            Módulo de Gestion de Curriculum de Candidatos a Puestos Laborales
+        </p>
+        <p><a href="http://www.unitec.edu" class="btn btn-primary btn-lg">UNITEC &raquo;</a></p>
+    </div>
+
+    <div class="jumbotron text-left">
+        <p>
+            El objetivo del programa es permitir a solicitantes de puestos, llenar su información y experiencia
+            laboral, y permitir subir su CV y fotografia reciente.
+            Se contara con un modulo administrativo para poder filtrar y leer las solicitudes entrantes y marcar
+            las solicitudes con puntuacion de estrellas en base a los criterios del evaluador.
+            Este proyecto se realiza como parte de las actividades de Agile Scrum, vistas en la clase de
+            Administración de Proyectos de Software.
+        </p>
+
+        <h3>
+            Integrantes
+            <small class="text-muted">- Segundo Semestre 2018</small>
+        </h3>
+
+        <div class="table-responsive">
+            <table class="table">
+
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Correo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mario</td>
+                        <td>Perdomo</td>
+                        <td><a href="mailto:mp@unitec.edu">mp@unitec.edu</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Cristian</td>
+                        <td>Mejia</td>
+                        <td><a href="mailto:cmejiaarias@unitec.edu">cmejiaarias@unitec.edu</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>J. Francisco</td>
+                        <td>Martinez</td>
+                        <td><a href="mailto:f.martinez.l@unitec.edu">f.martinez.l@unitec.edu</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</body>
+</html>
