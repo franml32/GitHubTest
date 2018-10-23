@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -76,6 +76,7 @@ namespace GestionDeCV.Models
         [Display(Name = "Dirección 2")]
         public string Address2 { get; set; }
 
+CRISTIANMEJIA
 
         [Required(ErrorMessage ="Ciudad de casa de habitación es requerido")]
         [StringLength (40)]
