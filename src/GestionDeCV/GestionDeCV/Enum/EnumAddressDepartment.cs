@@ -7,6 +7,21 @@ using System.Web;
 
 namespace GestionDeCV.Enum
 {
+    public enum EnumEstadoCiv
+    {
+        [Display(Name = "Soltero (a)")]
+        Soltero = 1,
+
+        [Display(Name = "Casado (a)")]
+        Casado = 2,
+
+        [Display(Name = "Divorciado (a)")]
+        Divorciado = 3,
+
+        [Display(Name = "Viudo (a)")]
+        Viudo = 4,
+
+    }
 
     public enum EnumAddressDepartment
     {
@@ -65,5 +80,7 @@ namespace GestionDeCV.Enum
         Yoro = 18,
     }
 
+
+   
 
 }
