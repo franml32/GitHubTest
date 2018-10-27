@@ -94,12 +94,18 @@ namespace GestionDeCV.Models
         [Display(Name = "E-Mail")]
         public string email { get; set; }
 
-        
-        public DateTime RecordSysTime { get => DateTime.Now;}
+        [Required(ErrorMessage = "Puesto de Trabajo es requerido")]
+        [StringLength(40)]
+        [MinLength(4, ErrorMessage = "Ingrese el puesto de Trabajo valido")]
+        [Display(Name = "Puesto de Trabajo Deseado")]
+        public string PuestoTra { get; set; }
 
 
-        [Display(Name = "Fotografia Reciente")]
-        public byte[] Photo { get; set; }
+        //public DateTime RecordSysTime { get => DateTime.Now;}
+
+
+        //[Display(Name = "Fotografia Reciente")]
+        //public byte[] Photo { get; set; }
     }
 
 

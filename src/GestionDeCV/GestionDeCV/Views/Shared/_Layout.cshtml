@@ -29,6 +29,7 @@
                         <a class="dropdown-item" href="~/CandidateGeneralnfoes/Index">Listado de Candidatos</a>
                         <a class="dropdown-item" href="#">Registrarse</a>
                     </div>
+                    @Html.Partial("_LoginPartial")
                 </li>
             </ul>   
         </div>
@@ -38,7 +39,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Creado por Francisco Martinez</p>
+            <p>&copy; @DateTime.Now.Year - Creado por GTI</p>
         </footer>
     </div>
 
