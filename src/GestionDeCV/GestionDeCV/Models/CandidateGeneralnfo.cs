@@ -34,8 +34,16 @@ namespace GestionDeCV.Models
         [StringLength(30)]
         [MinLength(8, ErrorMessage ="Por favor ingrese un número de identidad válido")]
         [Display(Name = "Documento de Identidad")]
-
         public string DocumentId { get; set; }
+
+       
+
+
+        [Required(ErrorMessage = "Debe seleccionar un Estado Civil")]
+        [Display(Name = "Estado Civil")]
+        public EnumEstadoCiv EstadoCiv { get; set; }
+
+
 
         [Required(ErrorMessage ="Fecha de nacimiento es requerido")]
         [Display(Name = "Fecha de Nacimiento")]
@@ -94,7 +102,27 @@ namespace GestionDeCV.Models
         [Display(Name = "E-Mail")]
         public string email { get; set; }
 
-        
+
+        [Required(ErrorMessage = "Titulo del curriculum es requerido")]
+        [StringLength(25)]
+        [MinLength(8, ErrorMessage = "Ingrese el itulo del curriculum")]
+        [Display(Name = "Titulo del curriculum")]
+        public string TituloCurr { get; set; }
+
+        [Required(ErrorMessage = "Descripcion Profesional es requerida")]
+        [StringLength(500)]
+        [MinLength(8, ErrorMessage = "Ingrese la Descripcion Profesional")]
+        [Display(Name = "Descripcion Profesional")]
+        public string DescripcionPro { get; set; }
+
+        [Required(ErrorMessage = "Salario Minimo Aceptado es requerida")]
+        [Range(0,999999.99)]
+        [MinLength(8, ErrorMessage = "Ingrese el Salario Minimo Aceptado")]
+        [Display(Name = "Salario Minimo Aceptado")]
+        public decimal SalarioMinimoAcep { get; set; }
+
+
+
         public DateTime RecordSysTime { get => DateTime.Now;}
 
 
