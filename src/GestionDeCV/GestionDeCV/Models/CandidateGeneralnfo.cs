@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using GestionDeCV.Enum;
-
 namespace GestionDeCV.Models
 {
     public class CandidateGeneralnfo
@@ -101,13 +100,11 @@ namespace GestionDeCV.Models
         public string PuestoTra { get; set; }
 
 
-        //public DateTime RecordSysTime { get => DateTime.Now;}
+        public DateTime RecordSysTime { get => DateTime.Now;}
 
 
-        //[Display(Name = "Fotografia Reciente")]
-        //public byte[] Photo { get; set; }
+        [Display(Name = "Fotografia Reciente")]
+        public byte[] Photo { get; set; }
     }
-
-
 
 }

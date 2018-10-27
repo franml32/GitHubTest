@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">-->
     <title>@ViewBag.Title - Gestion de CV's</title>
-    
+    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+
 </head>
 <body>
 
@@ -31,7 +33,7 @@
                     </div>
                     @Html.Partial("_LoginPartial")
                 </li>
-            </ul>   
+            </ul>
         </div>
     </nav>
 
@@ -46,5 +48,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <meta name="google-site-verification" content="YUPN1f8NxaF9ye8X58zSNonalXQdutLBhPLxAh1lT-k" />
 </body>
 </html>

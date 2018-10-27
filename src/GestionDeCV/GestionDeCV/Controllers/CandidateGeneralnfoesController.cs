@@ -51,7 +51,8 @@ namespace GestionDeCV.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,SecondName,LastName,DocumentId,DateOfBirth,CountryOfBirth,CityOfBirth,PhoneNumber,CellPhoneNumner,Address1,Address2,AddressCity,AddressDepartment,email,PuestoTra")] CandidateGeneralnfo candidateGeneralnfo)
+
+        public ActionResult Create([Bind(Include = "Id,FirstName,SecondName,LastName,DocumentId,EstadoCiv,DateOfBirth,CountryOfBirth,CityOfBirth,PhoneNumber,CellPhoneNumner,Address1,Address2,AddressCity,AddressDepartment,email,TituloCurr,DescripcionPro,SalarioMinimoAcep")] CandidateGeneralnfo candidateGeneralnfo)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +87,9 @@ namespace GestionDeCV.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,SecondName,LastName,DocumentId,DateOfBirth,CountryOfBirth,CityOfBirth,PhoneNumber,CellPhoneNumner,Address1,Address2,AddressCity,AddressDepartment,email,PuestoTra")] CandidateGeneralnfo candidateGeneralnfo)
+
+        public ActionResult Edit([Bind(Include = "Id,FirstName,SecondName,LastName,DocumentId,EstadoCiv,DateOfBirth,CountryOfBirth,CityOfBirth,PhoneNumber,CellPhoneNumner,Address1,Address2,AddressCity,AddressDepartment,email,TituloCurr,DescripcionPro,SalarioMinimoAcep")] CandidateGeneralnfo candidateGeneralnfo)
+
         {
             if (ModelState.IsValid)
             {
