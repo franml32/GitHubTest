@@ -14,12 +14,16 @@ namespace GestionDeCV.Controllers
     {
         private CandidateDBContext db = new CandidateDBContext();
 
+
+        [Authorize]
         // GET: CandidateGeneralnfoes
         public ActionResult Index()
         {
             return View(db.dboCandidateGeneralnfo.ToList());
         }
 
+
+        [Authorize]
         // GET: CandidateGeneralnfoes/Details/5
         public ActionResult Details(Guid? id)
         {
@@ -34,7 +38,7 @@ namespace GestionDeCV.Controllers
             }
             return View(candidateGeneralnfo);
         }
-
+        [Authorize]
         // GET: CandidateGeneralnfoes/Create
         public ActionResult Create()
         {
@@ -44,9 +48,11 @@ namespace GestionDeCV.Controllers
         // POST: CandidateGeneralnfoes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,FirstName,SecondName,LastName,DocumentId,EstadoCiv,DateOfBirth,CountryOfBirth,CityOfBirth,PhoneNumber,CellPhoneNumner,Address1,Address2,AddressCity,AddressDepartment,email,TituloCurr,DescripcionPro,SalarioMinimoAcep")] CandidateGeneralnfo candidateGeneralnfo)
+
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +64,7 @@ namespace GestionDeCV.Controllers
 
             return View(candidateGeneralnfo);
         }
-
+        [Authorize]
         // GET: CandidateGeneralnfoes/Edit/5
         public ActionResult Edit(Guid? id)
         {
@@ -77,8 +83,11 @@ namespace GestionDeCV.Controllers
         // POST: CandidateGeneralnfoes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public ActionResult Edit([Bind(Include = "Id,FirstName,SecondName,LastName,DocumentId,EstadoCiv,DateOfBirth,CountryOfBirth,CityOfBirth,PhoneNumber,CellPhoneNumner,Address1,Address2,AddressCity,AddressDepartment,email,TituloCurr,DescripcionPro,SalarioMinimoAcep")] CandidateGeneralnfo candidateGeneralnfo)
         {
             if (ModelState.IsValid)
@@ -89,7 +98,7 @@ namespace GestionDeCV.Controllers
             }
             return View(candidateGeneralnfo);
         }
-
+        [Authorize]
         // GET: CandidateGeneralnfoes/Delete/5
         public ActionResult Delete(Guid? id)
         {
@@ -104,7 +113,7 @@ namespace GestionDeCV.Controllers
             }
             return View(candidateGeneralnfo);
         }
-
+        [Authorize]
         // POST: CandidateGeneralnfoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -115,7 +124,7 @@ namespace GestionDeCV.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [Authorize]
         protected override void Dispose(bool disposing)
         {
             if (disposing)

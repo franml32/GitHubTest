@@ -1,3 +1,4 @@
+
 ﻿@model GestionDeCV.Models.CandidateGeneralnfo
 
 @{
@@ -107,15 +108,24 @@
                     @Html.DisplayFor(model => model.email)
                 </dd>
 
+                <dt>
+                    @Html.DisplayNameFor(model => model.TituloCurr)
+                </dt>
 
                 <dd>
                     @Html.DisplayFor(model => model.TituloCurr)
                 </dd>
 
+                <dt>
+                    @Html.DisplayNameFor(model => model.DescripcionPro)
+                </dt>
                 <dd>
                     @Html.DisplayFor(model => model.DescripcionPro)
                 </dd>
 
+                <dt>
+                    @Html.DisplayNameFor(model => model.SalarioMinimoAcep)
+                </dt>
                 <dd>
                     @Html.DisplayFor(model => model.SalarioMinimoAcep)
                 </dd>
@@ -127,3 +137,4 @@
     @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Regresar a la Lista", "Index")
 </p>
+
