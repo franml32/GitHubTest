@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using GestionDeCV.Enum;
+
 namespace GestionDeCV.Models
 {
     public class CandidateGeneralnfo
@@ -14,7 +15,7 @@ namespace GestionDeCV.Models
         [Required(ErrorMessage = "Nombre del Candidato es requerido")]
         [StringLength (60)]
         [MinLength(3, ErrorMessage = "Por favor ingrese un nombre válido")]
-        [Display(Name = "Primer Nombre")]
+        [Display(Name = "Primer Nombre *")]
         public string FirstName { get; set; }
 
 
@@ -25,32 +26,40 @@ namespace GestionDeCV.Models
         [Required(ErrorMessage = "Apellidos del Candidato es requerido")]
         [StringLength (60)]
         [MinLength(4, ErrorMessage = "Por favor ingrese un apellido válido")]
-        [Display(Name = "Apellidos")]
+        [Display(Name = "Apellidos *")]
         public string LastName { get; set; }
 
 
         [Required(ErrorMessage = "Número de Documento de identidad es requerido")]
         [StringLength(30)]
         [MinLength(8, ErrorMessage ="Por favor ingrese un número de identidad válido")]
-        [Display(Name = "Documento de Identidad")]
-
+        [Display(Name = "Documento de Identidad *")]
         public string DocumentId { get; set; }
 
+       
+
+
+        [Required(ErrorMessage = "Debe seleccionar un Estado Civil")]
+        [Display(Name = "Estado Civil *")]
+        public EnumEstadoCiv EstadoCiv { get; set; }
+
+
+
         [Required(ErrorMessage ="Fecha de nacimiento es requerido")]
-        [Display(Name = "Fecha de Nacimiento")]
+        [Display(Name = "Fecha de Nacimiento *")]
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
 
         [Required(ErrorMessage = "País de Nacimiento es requerido")]
         [StringLength (40)]
         [MinLength(4, ErrorMessage ="Ingrese un Páis válido")]
-        [Display(Name = "País de Nacimiento")]
+        [Display(Name = "País de Nacimiento *")]
         public string CountryOfBirth { get; set; }
 
         [Required(ErrorMessage ="Ciudad de Nacimiento es requerida")]
         [StringLength (60)]
         [MinLength(4, ErrorMessage = "Ingrese una ciudad de nacimiento válida")]
-        [Display(Name = "Ciudad de Nacimiento")]
+        [Display(Name = "Ciudad de Nacimiento *")]
         public string CityOfBirth { get; set; }
 
         [StringLength (15)]
@@ -60,13 +69,13 @@ namespace GestionDeCV.Models
         [Required(ErrorMessage ="El número de celular es requerido")]
         [StringLength (15)]
         [MinLength(8, ErrorMessage ="Ingrese un número de celular válido")]
-        [Display(Name = "No. Celular")]
+        [Display(Name = "No. Celular *")]
         public string CellPhoneNumner { get; set; }
 
         [Required(ErrorMessage = "Dirección de casa de habitación es requerido")]
         [StringLength (100)]
         [MinLength(10, ErrorMessage = "Ingrese una dirección válida.")]
-        [Display(Name = "Dirección 1")]       
+        [Display(Name = "Dirección 1 *")]       
         public string Address1 { get; set; }
 
 
@@ -79,25 +88,39 @@ namespace GestionDeCV.Models
         [Required(ErrorMessage ="Ciudad de casa de habitación es requerido")]
         [StringLength (40)]
         [MinLength(4, ErrorMessage ="Ingrese un nombre de ciudad valido")]
-        [Display(Name = "Ciudad")]
+        [Display(Name = "Ciudad *")]
         public string AddressCity { get; set; }
 
         [Required(ErrorMessage = "Debe seleccionar un departamento")]
-        [Display(Name = "Departamento")]
+        [Display(Name = "Departamento *")]
         public EnumAddressDepartment AddressDepartment { get; set; }
 
        
         [Required(ErrorMessage = "Correo Electronico es requerido")]
         [StringLength(150)]
         [EmailAddress]
-        [Display(Name = "E-Mail")]
+        [Display(Name = "E-Mail *")]
         public string email { get; set; }
 
-        [Required(ErrorMessage = "Puesto de Trabajo es requerido")]
-        [StringLength(40)]
-        [MinLength(4, ErrorMessage = "Ingrese el puesto de Trabajo valido")]
-        [Display(Name = "Puesto de Trabajo Deseado")]
-        public string PuestoTra { get; set; }
+
+        [Required(ErrorMessage = "Titulo del curriculum es requerido")]
+        [StringLength(25)]
+        [MinLength(8, ErrorMessage = "Ingrese el itulo del curriculum")]
+        [Display(Name = "Titulo del curriculum *")]
+        public string TituloCurr { get; set; }
+
+        [Required(ErrorMessage = "Descripcion Profesional es requerida")]
+        [StringLength(500)]
+        [MinLength(8, ErrorMessage = "Ingrese la Descripcion Profesional")]
+        [Display(Name = "Descripcion Profesional *")]
+        public string DescripcionPro { get; set; }
+
+        [Required(ErrorMessage = "Salario propuesto es requerida")]
+        [Range(0,999999.99)]
+        //[MinLength(8, ErrorMessage = "Ingrese el Salario Minimo Aceptado")]
+        [Display(Name = "Salario Propuesto *")]
+        public decimal SalarioMinimoAcep { get; set; }
+
 
 
         public DateTime RecordSysTime { get => DateTime.Now;}
@@ -107,4 +130,3 @@ namespace GestionDeCV.Models
         public byte[] Photo { get; set; }
     }
 
-}

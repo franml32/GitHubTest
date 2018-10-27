@@ -10,127 +10,125 @@
     <h4>Perfil de Candidato</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+        <div class="row">
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+            <div class="col-md-6">
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.SecondName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.SecondName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.DocumentId)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.DocumentId)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SecondName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.SecondName)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.EstadoCiv)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.EstadoCiv)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DocumentId)
-        </dt>
+                <dt>
+                    @Html.DisplayNameFor(model => model.DateOfBirth)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.DateOfBirth)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.DocumentId)
-        </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.CountryOfBirth)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.CountryOfBirth)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.CityOfBirth)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.CityOfBirth)
+                </dd>
+            </div>
+            <div class="col-md-6">
+                <dt>
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PhoneNumber)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.CellPhoneNumner)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.CellPhoneNumner)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address1)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Address1)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address2)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Address2)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.AddressCity)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.AddressCity)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.AddressDepartment)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.AddressDepartment)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.email)
+                </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DateOfBirth)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.DateOfBirth)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.email)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CountryOfBirth)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.TituloCurr)
+                </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CountryOfBirth)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.DescripcionPro)
+                </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CityOfBirth)
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.SalarioMinimoAcep)
+                </dd>
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.CityOfBirth)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CellPhoneNumner)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CellPhoneNumner)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Address1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Address2)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address2)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AddressCity)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AddressCity)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AddressDepartment)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AddressDepartment)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PuestoTra)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PuestoTra)
-        </dd>
-
-    </dl>
+</dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
@@ -141,3 +139,4 @@
         </div>
     }
 </div>
+

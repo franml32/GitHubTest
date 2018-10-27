@@ -5,6 +5,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
+using Owin.Security.Providers.LinkedIn;
 using GestionDeCV.Models;
 
 namespace GestionDeCV
@@ -58,11 +59,13 @@ namespace GestionDeCV
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseLinkedInAuthentication("786gbffcd9qnb9", "mCz67IAYt1vVaaGf");
+
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "914425350689-1amodubbm8oi8rlffvrgueuhigcopvhk.apps.googleusercontent.com",
+                ClientSecret = "nNY-20peSpCe-p28QN2loOLO"
+            });
         }
     }
 }
