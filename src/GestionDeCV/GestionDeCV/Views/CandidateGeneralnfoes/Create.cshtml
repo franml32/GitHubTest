@@ -45,8 +45,6 @@
                 </div>
             </div>
 
-
-
             <div class="form-group">
                 @Html.LabelFor(model => model.EstadoCiv, new { @class = "control-label col-md-4" })
                 <div class="col-md-10">
@@ -148,9 +146,9 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.DescripcionPro, htmlAttributes: new { @class = "control-label col-md-4" })
-                <div class="col-md-12">
-                    @Html.TextAreaFor(model => model.DescripcionPro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.LabelFor(model => model.DescripcionPro, htmlAttributes: new { @class = "control-label col-md-6" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(c => c.DescripcionPro, new { rows = 5, columns = 40 })
                     @Html.ValidationMessageFor(model => model.DescripcionPro, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -175,7 +173,14 @@
     }
 
     <div>
-        @Html.ActionLink("Regresar a la Lista", "Index")
+        <div class="row">
+            <div class="col-md-6">
+                @Html.ActionLink("Regresar a la Lista", "Index")
+            </div>
+            <div class="col-md-6">
+                @Html.Label("* Campos Requeridos", htmlAttributes: new { @class = "control-label col-md-6" })
+            </div>
+        </div>
     </div>
 
     @section Scripts {
